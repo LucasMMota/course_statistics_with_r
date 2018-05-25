@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ### how to recode a continous variable into a factor
@@ -12,7 +11,6 @@ View(demo)
 
 demo$incat[demo$income<200] = "Low income"
 demo$incat[demo$income>=200] = "High income"
-
 View(demo)
 
 ### now we want to create three groups by income
@@ -24,7 +22,6 @@ View(demo)
 ### a new variable, incat2, will be created
 
 demo$incat2 = cut(demo$income, breaks=c(-Inf, 150, 300, Inf), labels=c("Low income", "Medium income", "High income"))
-
 View(demo)
 
 ### by default, the ranges are open on the left, and closed on the right 
