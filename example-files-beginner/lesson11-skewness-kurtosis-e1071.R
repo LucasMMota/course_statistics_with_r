@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ##########
@@ -14,9 +13,7 @@ View(demo)
 require(e1071)
 
 ### compute the skewness
-
 skewness(demo$income)
 
 ### compute the kurtosis
-
 kurtosis(demo$income)

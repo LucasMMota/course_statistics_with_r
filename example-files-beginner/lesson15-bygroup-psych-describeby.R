@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ##########
@@ -15,5 +14,4 @@ View(demo)
 require(psych)
 
 ### use the describeBy command
-
-describeBy(demo$income, demo$educ)
+describeBy(demo$income, demo$educ) # agrupa o icome por grupos

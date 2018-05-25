@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ##########
@@ -10,9 +9,8 @@ View(demo)
 ### we will find out the mode for the variable income
 
 ### load the package
-
+install.packages("modeest")
 require(modeest)
-
 mlv(demo$income, method="mfv")   ### "mfv" stands for "most frequent value"
 
 ### for the discrete variables, the best way to compute the mode is to tabulate the frequencies

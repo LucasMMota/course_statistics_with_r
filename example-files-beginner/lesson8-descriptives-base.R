@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ##########
@@ -10,35 +9,26 @@ View(demo)
 ####### we will compute these indicators for the variable income
 
 ### mean
-
 mean(demo$income)
 
 ### or
-
 m <- mean(demo$income)
-
 print(m)
 
 ### standard deviation and variance
-
 sd(demo$income)
-
 var(demo$income)
 
 ### minimum, maximum and range
-
 min(demo$income)
-
 max(demo$income)
-
 range(demo$income)
-
 max(demo$income) - min(demo$income)
 
 ### median
-
 median(demo$income)
 
 ### quartiles
-
 quantile(demo$income)
+
+summary(demo$income)

@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ##########
@@ -11,7 +10,7 @@ View(demo)
 ### by gender (separately for male and female subjects)
 
 ### load the package
-
+install.packages("doBy")
 require(doBy)
 
 ### define the function that generates the statistics
@@ -20,7 +19,6 @@ require(doBy)
 func <- function(x) {descStat(x, na.rm=TRUE)}
 
 ### use the command summaryBy
-
 summaryBy(income~gender, data=demo, FUN=func)
 
 ### get the main statistical indicators for the variables income and age

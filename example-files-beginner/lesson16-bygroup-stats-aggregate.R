@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ##########
@@ -11,24 +10,18 @@ View(demo)
 ### by marital status (married/unmarried)
 
 ### compute the mean
-
 aggregate(demo$age, by=list(demo$marital), FUN=mean)
 
 ### compute the standard deviation
-
 aggregate(demo$age, by=list(demo$marital), FUN=sd)
 
 ### compute the median
-
 aggregate(demo$age, by=list(demo$marital), FUN=median)
 
 ### compute the variance
-
 aggregate(demo$age, by=list(demo$marital), FUN=var)
 
 ### etc.
 
 ### very useful when we want to combine the factor categories
-
 aggregate(demo$age, by=list(demo$marital, demo$gender), FUN=mean)
-

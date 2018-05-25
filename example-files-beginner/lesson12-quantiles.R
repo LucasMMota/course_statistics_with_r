@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ##########
@@ -17,5 +16,4 @@ View(demo)
 quantile(demo$income, probs = c(0.17, 0.55, 0.97))
 
 ### to get the quartiles
-
 quantile(demo$income, probs = c(0.25, 0.50, 0.75))

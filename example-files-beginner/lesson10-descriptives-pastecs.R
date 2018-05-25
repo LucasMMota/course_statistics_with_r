@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ##########
@@ -11,35 +10,27 @@ View(demo)
 ###### age, income and car price
 
 ### create a matrix with the variables of interest
-
 demo2 <- cbind(demo$age, demo$income, demo$carpr)
 
 ### give suggestive names to the matrix columns
-
-colnames(demo2) <- c("age", "income", "carpr")
-
+colnames(demo2) <- c("age", "income", "carprice")
 View(demo2)
 
 ### load the pastecs package
-
+install.packages("pastecs")
 require(pastecs)
 
 ### before computing the indicators we set some options (in base R)
-
 options(scipen=100)  ## force R to use the standard notation, NOT the exponential notation
-
 options(digits=2)    ## make R show only the first two decimals
 
 ### run the stat.desc funtion from pastecs
 
 ### if we want ALL the statistics we run
-
 stat.desc(demo2)
 
 ### if we want to omit the basic statistics we run
-
 stat.desc(demo2, basic = FALSE)
 
 ### if we want the basic statistics only we can execute
-
 stat.desc(demo2, desc = FALSE)
