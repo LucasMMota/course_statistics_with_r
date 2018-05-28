@@ -1,4 +1,4 @@
-demo <- read.csv("demographics.csv")
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 
 View(demo)
 

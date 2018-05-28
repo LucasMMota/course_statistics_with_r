@@ -1,4 +1,4 @@
-demo <- read.csv("demographics.csv")
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 
 View(demo)
 
@@ -10,13 +10,12 @@ View(demo)
 ### we will build a cross table with the variables gender and carcat (car category)
 
 ### load the package
-
+install.packages("gmodels")
 require(gmodels)
 
 CrossTable(demo$gender, demo$carcat, prop.chisq = FALSE)  ### we don't want the chi square contributions
 
 ### some other options of the CrossTable function
-
 CrossTable(demo$gender, demo$carcat, digits=3, expected=TRUE, prop.r=TRUE, prop.c=TRUE,
            prop.t=TRUE, prop.chisq=TRUE, chisq = FALSE, fisher=FALSE, mcnemar=FALSE,
            missing.include=FALSE)

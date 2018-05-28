@@ -1,5 +1,4 @@
-demo <- read.csv("demographics.csv")
-
+demo <- read.csv("/Users/lucas/Documents/cursos/Statistics_with_R/csv-data-frames/demographics.csv")
 View(demo)
 
 ##########
@@ -18,12 +17,10 @@ require(ggplot2)
 ggplot()+geom_histogram(data=demo, aes(x=income))
 
 ### change the bins color and border
-
 ggplot()+
        geom_histogram(data=demo, aes(x=income), fill="red", color="black")
 
 ### represent the density on the y axis (relative frequencies)
-  
 ggplot()+
   geom_histogram(data=demo, aes(x=income, y=..density..), fill="red", color="black")
 
@@ -32,7 +29,6 @@ ggplot()+
 ### create a facet grid (multiple histograms)
 ### we will create a histogram for each combination of the variables 
 ### gender and marital status
-
 ggplot()+
   geom_histogram(data=demo, aes(x=income, y=..density..), fill="red", color="black")+
   facet_grid(gender~marital)
